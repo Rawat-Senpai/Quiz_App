@@ -14,28 +14,45 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="5dp"
         android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:layout_editor_absoluteX="10dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#5202E1E1"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#5202E1E1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/result" />
+
 
             <TextView
                 android:id="@+id/congo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="Congratulations  !!"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                android:layout_marginTop="15dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -61,30 +78,30 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_marginTop="12dp"
-                android:layout_marginLeft="10dp"
-                app:cardCornerRadius="12dp"
-                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="10dp"
-                android:layout_height="wrap_content">
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:gravity="center"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_height="match_parent">
+                    android:gravity="center">
+
                     <TextView
                         android:id="@+id/button"
-                        android:background="#F8683B"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:background="#F8683B"
                         android:gravity="center"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
                         android:text="FINISH"
+                        android:textColor="@color/white"
                         android:textSize="20sp"
-                         />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -92,12 +109,5 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/result" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
