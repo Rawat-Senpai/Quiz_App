@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -70,8 +71,15 @@ class MainActivity : AppCompatActivity() {
                 setColor(question.correct_ans,R.drawable.correct_question_option)
 
                 handler.postDelayed({
-                    if(currentPosition==questionList!!.size)
-                        submit.text="FINISH"
+                    if(currentPosition==questionList!!.size) {
+                        submit.text = "FINISH"
+                        opt_1.visibility=View.GONE
+                        opt_2.visibility=View.GONE
+                        opt_3.visibility=View.GONE
+                        opt_4.visibility=View.GONE
+                        imageView.setImageResource(R.drawable.congo)
+                        question_text.text="congratulation You have completed your quiz successfully  \nPress Finish to watch your score "
+                    }
                     else {
                         currentPosition++
                         when{
@@ -94,7 +102,7 @@ class MainActivity : AppCompatActivity() {
             }else{
                 currentPosition++
                 when{
-                    currentPosition<=questionList!!.size->{
+                    currentPosition<questionList!!.size ->{
                         setQuestion()
                     }
                     else->{
